@@ -1,0 +1,429 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Study Hub ADS: portfólio acadêmico, projetos e evolução em Análise e Desenvolvimento de Sistemas.">
+  <title>Study Hub | Portfólio ADS</title>
+
+  <style>
+    :root {
+      --background: #0b1120;
+      --surface: #131d30;
+      --primary: #70a5ff;
+      --text: #f1f5f9;
+      --muted: #a8b5ca;
+      --border: #283650;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--background);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1080px, 90%);
+      margin: auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(11, 17, 32, 0.96);
+      border-bottom: 1px solid var(--border);
+    }
+
+    nav {
+      min-height: 72px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: var(--primary);
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      font-size: 0.92rem;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .hero {
+      padding: 100px 0 85px;
+      background:
+        radial-gradient(ellipse at top right, #203b68 0%, transparent 55%);
+    }
+
+    .tag {
+      display: inline-block;
+      border: 1px solid #45689e;
+      color: var(--primary);
+      border-radius: 30px;
+      padding: 5px 13px;
+      font-size: 0.85rem;
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      line-height: 1.12;
+      max-width: 800px;
+      margin-bottom: 24px;
+    }
+
+    h1 span {
+      color: var(--primary);
+    }
+
+    .hero p {
+      max-width: 680px;
+      color: var(--muted);
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+    }
+
+    .button {
+      display: inline-block;
+      background: var(--primary);
+      color: #081326;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      margin: 5px 8px 5px 0;
+    }
+
+    .button.secondary {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text);
+    }
+
+    section {
+      padding: 75px 0;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .section-intro {
+      color: var(--muted);
+      margin-bottom: 30px;
+      max-width: 700px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px;
+    }
+
+    .card h3 {
+      color: var(--primary);
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .card a {
+      display: inline-block;
+      color: var(--primary);
+      margin-top: 14px;
+      font-weight: bold;
+    }
+
+    .about {
+      background: #0e1728;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .about-content {
+      max-width: 800px;
+    }
+
+    .about-content p {
+      color: var(--muted);
+      margin-top: 15px;
+    }
+
+    .status {
+      display: inline-block;
+      color: #b9d5ff;
+      background: #1b3151;
+      border-radius: 6px;
+      padding: 3px 9px;
+      font-size: 0.8rem;
+      margin-top: 15px;
+    }
+
+    footer {
+      padding: 28px 0;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 760px) {
+      nav {
+        padding: 15px 0;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .nav-links {
+        gap: 12px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 70px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="container" aria-label="Navegação principal">
+      <a class="logo" href="#inicio">Study Hub (ADS)</a>
+
+      <div class="nav-links">
+        <a href="#sobre">Sobre</a>
+        <a href="#disciplinas">Disciplinas</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#materiais">Materiais</a>
+        <a href="#contato">Contato</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container">
+        <span class="tag">Portfólio acadêmico de tecnologia</span>
+
+        <h1>Aprendizado, prática e evolução em <span>tecnologia.</span></h1>
+
+        <p>
+          Bem-vindo ao Study Hub (ADS), meu espaço de organização acadêmica
+          e desenvolvimento profissional. Aqui reúno meus estudos,
+          projetos e atividades do curso de Análise e Desenvolvimento
+          de Sistemas.
+        </p>
+
+        <a class="button" href="#projetos">Conheça os projetos</a>
+        <a class="button secondary" href="#sobre">Sobre mim</a>
+      </div>
+    </section>
+
+    <section class="about" id="sobre">
+      <div class="container about-content">
+        <h2 class="section-title">Sobre mim</h2>
+
+        <p>
+          Sou estudante de Análise e Desenvolvimento de Sistemas e tenho
+          interesse em compreender como computadores, softwares e códigos
+          funcionam. Escolhi essa área para transformar minha curiosidade
+          por tecnologia em conhecimento prático e preparação profissional.
+        </p>
+
+        <p>
+          Tenho interesse especial em programação e dados. Meu objetivo é
+          desenvolver minhas habilidades por meio dos estudos, da prática
+          e da construção de projetos acadêmicos e pessoais.
+        </p>
+
+        <span class="status">Em constante aprendizado</span>
+      </div>
+    </section>
+
+    <section id="disciplinas">
+      <div class="container">
+        <h2 class="section-title">Disciplinas</h2>
+
+        <p class="section-intro">
+          Áreas de estudo que contribuem para minha formação em
+          Análise e Desenvolvimento de Sistemas.
+        </p>
+
+        <div class="grid">
+          <article class="card">
+            <h3>Bootcamp I</h3>
+            <p>Git, GitHub, versionamento e construção de portfólio.</p>
+          </article>
+
+          <article class="card">
+            <h3>Banco de Dados I</h3>
+            <p>Modelagem de dados, organização de informações e SQL.</p>
+          </article>
+
+          <article class="card">
+            <h3>Engenharia de Software</h3>
+            <p>Planejamento, requisitos e processos de desenvolvimento.</p>
+          </article>
+
+          <article class="card">
+            <h3>Lógica de Programação</h3>
+            <p>Algoritmos, estruturas lógicas e resolução de problemas.</p>
+          </article>
+
+          <article class="card">
+            <h3>Introdução à Computação</h3>
+            <p>Fundamentos de hardware, software e funcionamento dos computadores.</p>
+          </article>
+
+          <article class="card">
+            <h3>Matemática para Computação</h3>
+            <p>Fundamentos matemáticos aplicados à computação.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="projetos">
+      <div class="container">
+        <h2 class="section-title">Projetos</h2>
+
+        <p class="section-intro">
+          Espaço dedicado aos projetos desenvolvidos durante minha formação
+          e aos trabalhos pessoais relacionados à tecnologia.
+        </p>
+
+        <div class="grid">
+          <article class="card">
+            <h3>Study Hub (ADS)</h3>
+            <p>
+              Portfólio acadêmico para organizar disciplinas, atividades,
+              projetos e materiais de estudo.
+            </p>
+            <span class="status">Em desenvolvimento</span>
+          </article>
+
+          <article class="card">
+            <h3>Projetos acadêmicos</h3>
+            <p>
+              Trabalhos e exercícios realizados ao longo do curso,
+              acompanhados de documentação.
+            </p>
+            <span class="status">Em atualização</span>
+          </article>
+
+          <article class="card">
+            <h3>Projetos pessoais</h3>
+            <p>
+              Espaço reservado para aplicações e experimentos desenvolvidos
+              durante minha evolução em programação.
+            </p>
+            <span class="status">Em construção</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="materiais">
+      <div class="container">
+        <h2 class="section-title">Materiais de estudo</h2>
+
+        <p class="section-intro">
+          Organização de conteúdos utilizados para revisão,
+          aprofundamento e acompanhamento da evolução acadêmica.
+        </p>
+
+        <div class="grid">
+          <article class="card">
+            <h3>Anotações e resumos</h3>
+            <p>Registros dos principais conceitos estudados nas disciplinas.</p>
+          </article>
+
+          <article class="card">
+            <h3>Atividades e entregas</h3>
+            <p>Organização dos trabalhos e exercícios acadêmicos.</p>
+          </article>
+
+          <article class="card">
+            <h3>Cursos e certificados</h3>
+            <p>Espaço para registrar formações complementares e certificados.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="contato">
+      <div class="container">
+        <h2 class="section-title">Contato profissional</h2>
+
+        <p class="section-intro">
+          Conecte-se comigo e acompanhe minha trajetória acadêmica.
+        </p>
+
+        <a class="button"
+           href="https://www.linkedin.com/in/jmmdf-721129434"
+           target="_blank"
+           rel="noopener noreferrer">
+          Meu LinkedIn
+        </a>
+
+        <a class="button secondary"
+           href="mailto:miguelmedeiros4132@gmail.com">
+          Enviar e-mail
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Study Hub (ADS) — Portfólio acadêmico pessoal.</p>
+      <p>Desenvolvido como parte da minha jornada em tecnologia.</p>
+    </div>
+  </footer>
+</body>
+</html>
